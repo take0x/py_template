@@ -1,0 +1,23 @@
+[project]
+name = "py-template"
+version = "0.1.0"
+description = "A template of a Python project"
+readme = "README.md"
+license = { file = "LICENSE" }
+
+[project.scripts]
+hello = "py_template.hello:main"
+
+[tool.rye]
+managed = true
+dev-dependencies = ["mypy", "ruff"]
+
+[tool.mypy]
+strict = true
+
+[tool.ruff]
+select = ["ALL"]
+ignore = [
+    "D",    # pydocstyle
+    "T201", # 'print' found
+]
