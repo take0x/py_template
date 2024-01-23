@@ -2,15 +2,30 @@
 name = "py-template"
 version = "0.1.0"
 description = "A template of a Python project"
+authors = []
+dependencies = []
 readme = "README.md"
-license = { file = "LICENSE" }
+requires-python = ">= 3.11"
 
 [project.scripts]
 hello = "py_template.hello:main"
 
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [tool.rye]
 managed = true
-dev-dependencies = ["mypy", "ruff"]
+dev-dependencies = [
+    "mypy>=1.8.0",
+    "ruff>=0.1.14",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/py_template"]
 
 [tool.mypy]
 strict = true
