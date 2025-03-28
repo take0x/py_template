@@ -31,8 +31,8 @@ packages = ["src/py_template"]
 strict = true
 
 [tool.ruff]
-select = ["ALL"]
-ignore = [
-    "D",    # pydocstyle
-    "T201", # 'print' found
+extend-select = [
+    "I",  # isort
+    "PTH", # pathlib
+    "UP", # pyupgrade
 ]
