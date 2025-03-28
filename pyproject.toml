@@ -14,7 +14,7 @@ hello = "py_template.hello:main"
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
-[tool.rye]
+[tool.uv]
 managed = true
 dev-dependencies = [
     "mypy>=1.8.0",
